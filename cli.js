@@ -4,7 +4,6 @@ var weatherFile = require("./weather.js");
 var moment = require("moment");
 var fs = require("fs");
 
-
 inquirer.prompt([
 	{
 		type: "list",
@@ -33,7 +32,7 @@ inquirer.prompt([
 				//Then run the weather app based on city name.
 				var userArray = [userName, citySearch, rightNow];
 				fs.appendFile("log.txt", "\n" + userArray);
-			})
+			});
 		} else {
 			inquirer.prompt([
 				{
@@ -46,9 +45,8 @@ inquirer.prompt([
 				if (password === "password1234") {
 					fs.readFile("log.txt", "utf8", function(err, data) {
 						console.log(data);
-					})
+					});
 				}
-			})
+			});
 		}
-	})
-}
+	});
