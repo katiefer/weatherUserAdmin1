@@ -1,0 +1,23 @@
+{
+  "name": "weatheruseradmin1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "cli.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katiefer/weatherUserAdmin1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/katiefer/weatherUserAdmin1/issues"
+  },
+  "homepage": "https://github.com/katiefer/weatherUserAdmin1#readme",
+  "dependencies": {
+    "inquirer": "^2.0.0",
+    "weather-js": "^1.0.2"
+  }
+}
