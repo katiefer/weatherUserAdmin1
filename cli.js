@@ -43,9 +43,8 @@ inquirer.prompt([
 				if (password === "password1234") {
 					fs.readFile("log.txt", "utf8", function(err, data) {
 						console.log(data);
-					})
+					});
 				}
 			});
 		}
 	});
-}
