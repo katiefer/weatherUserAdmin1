@@ -1,6 +1,6 @@
 var inquirer = require("inquirer");
 var weather = require("weather-js");
-var weatherFile = require("./weather.js");
+var weatherFile = require("./UserSearch.js");
 var moment = require("moment");
 var fs = require("fs");
 
@@ -49,6 +49,7 @@ inquirer.prompt([
 				if (password === "password1234") {
 					fs.readFile("log.txt", "utf8", function(err, data) {
 						console.log(data);
+						MyAdmin.getData();
 					});
 				}
 			});
