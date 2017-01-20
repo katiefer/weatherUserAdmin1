@@ -1,5 +1,6 @@
 var inquirer = require("inquirer");
-var weather = require("weatherjs");
+var weather = require("weather-js");
+var weatherSearch = require("./weather.js");
 
 inquirer.prompt([
 	{
