@@ -1,6 +1,8 @@
 var inquirer = require("inquirer");
 var weather = require("weather-js");
 var weatherFile = require("./weather.js");
+var moment = require("moment");
+
 
 
 inquirer.prompt([
@@ -27,8 +29,9 @@ inquirer.prompt([
 			]).then(function(response) {
 				var userName = response.named;
 				var citySearch = response.city;
+				var rightNow = moment().format("MMM Do YY");
 				//Then run the weather app based on city name.
-				var userArray = [userName, citySearch, moment().format("MMM Do YY")];
+				var userArray = [userName, citySearch, rightNow];
 				fs.appendFile("log.txt", "\n" + userArray);
 			});
 		} else {
