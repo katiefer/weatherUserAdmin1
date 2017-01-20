@@ -2,7 +2,7 @@ var inquirer = require("inquirer");
 var weather = require("weather-js");
 var weatherFile = require("./weather.js");
 var moment = require("moment");
-
+var fs = require("fs");
 
 
 inquirer.prompt([
