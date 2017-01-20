@@ -30,7 +30,7 @@ inquirer.prompt([
 				//Then run the weather app based on city name.
 				var userArray = [userName, citySearch, moment().format("MMM Do YY")];
 				fs.appendFile("log.txt", "\n" + userArray);
-			})
+			});
 		} else {
 			inquirer.prompt([
 				{
@@ -45,7 +45,7 @@ inquirer.prompt([
 						console.log(data);
 					})
 				}
-			})
+			});
 		}
-	})
+	});
 }
