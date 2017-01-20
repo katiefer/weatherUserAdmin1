@@ -47,5 +47,5 @@ inquirer.prompt([
 				}
 			})
 		}
-	}
-})
+	})
+}
