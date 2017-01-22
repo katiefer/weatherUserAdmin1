@@ -3,18 +3,18 @@
 var weather = require("weather-js");
 
 // Creates a UserSearch Constructor
-var UserSearch = function(name, location) {
+var UserSearch = function(userName, citySearch) {
 	// This checks to make sure that the new user is a instance of UserSearch
     if (!(this instanceof UserSearch)) {
-        return new UserSearch(name, location);
+        return new UserSearch(userName, citySearch);
     }
-    this.name = name;
-    this.location = location;
+    this.userName = userName;
+    this.citySearch = citySearch;
     this.date = Date.now();
     // This calls the weather-js module and passes through the variables for the function
     this.getWeather = function() {
 
-        weather.find({ search: this.location, degreeType: "F" }, function(err, result) {
+        weather.find({ search: this.citySearch, degreeType: "F" }, function(err, result) {
             // Returns and error if there is an error in the weather-js function
             if (err) console.log(err);
             // Prints the error to the console

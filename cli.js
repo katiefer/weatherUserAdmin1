@@ -1,10 +1,12 @@
 //Global variables including dependencies.
 var inquirer = require("inquirer");
 var weather = require("weather-js");
-var weatherFile = require("./UserSearch.js");
+var WeatherAdmin = require("./WeatherAdmin");
 var moment = require("moment");
 var fs = require("fs");
 //This will capture user input. First section specifically determines who is using app.
+var MyAdmin = new WeatherAdmin();
+
 inquirer.prompt([
 	{
 		type: "list",
@@ -37,6 +39,7 @@ inquirer.prompt([
 				}
 				var userArray = [userName + ", " + citySearch + ", " + rightNow];
 				fs.appendFile("log.txt", "\n" + userArray); //Above array will be logged in log.txt
+				MyAdmin.newUserSearch(userName, citySearch);
 			});
 		} else {
 			inquirer.prompt([ //When user is "Admin"
@@ -57,4 +60,4 @@ inquirer.prompt([
 		}
 	});
 //Allowing detailObj to be read by other files
-module.exports = detailObj;
+// module.exports = detailObj;
